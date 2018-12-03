@@ -10,3 +10,42 @@ LOCATION '/user/userID/table-name' TBLPROPERTIES
 ('skip.header.line.count'='2');
 
 
+
+
+CREATE EXTERNAL TABLE IF NOT EXISTS risk_data
+(YEAR INT, 
+LocationAbbr STRING, 
+LocationDesc STRING, 
+DataSource STRING, 
+Topic STRING, 
+Subtopic STRING, 
+ShortQuestionText STRING, 
+Greater_Risk_Question STRING, 
+Description STRING, 
+Data_Value_Symbol INT, 
+Data_Value_Type STRING, 
+Greater_Risk_Data_Value INT, 
+Greater_Risk_Data_Value_Footnote_Symbol INT, 
+Greater_Risk_Data_Value_Footnote INT, 
+Greater_Risk_Low_Confidence_Limit INT, 
+Greater_Risk_High_Confidence_Limit INT, 
+Lesser_Risk_Question STRING, 
+Lesser_Risk_Data_Value INT, 
+Lesser_Risk_Data_Value_Footnote_Symbol INT, 
+Lesser_Risk_Data_Value_Footnote INT, 
+Lesser_Risk_Low_Confidence_Limit INT, 
+Lesser_Risk_High_Confidence_Limit INT, 
+Sample_Size INT, Sex STRING, Race STRING, 
+Grade STRING, 
+SexualIdentity STRING, 
+SexOfSexualContacts STRING, 
+GeoLocation INT, 
+TopicId STRING, 
+SubTopicID STRING, 
+QuestionCode STRING, 
+LocationId INT, 
+StratID1 STRING, StratID2 STRING, StratID3 STRING, StratID4 STRING, StratID5 STRING, StratificationType STRING, StratID6 STRING) 
+
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+LOCATION '/user/userID/table-name' TBLPROPERTIES
+('skip.header.line.count'='2');
