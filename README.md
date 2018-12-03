@@ -6,7 +6,7 @@ Data Source URL: https://chronicdata.cdc.gov/views/q6p7-56au/rows.csv?accessType
 Data Size 5.75GB
 
 Group 4
-Member List:  Phillip Nguyen 
-              Brian Seto
-              Amy Li
+Member List:  Phillip Nguyen, 
+              Brian Seto,
+              Amy Li,
               Tararath Chea
