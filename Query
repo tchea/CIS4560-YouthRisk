@@ -1,0 +1,29 @@
+To determine how many risk based on topics are being used: 
+
+      SELECT topic, COUNT(topic) as total from risk_data GROUP BY topic ORDER BY total DESC limit 20;
+
+
+To determine topic without any duplication of title being used:
+
+      SELECT DISTINCT topic FROM risk_data;
+      
+
+
+To determine the number of topic count for each section:
+
+      SELECT subtopic, COUNT(subtopic) as total FROM risk_data GROUP BY subtopic ORDER BY total ASC limit 10;
+      
+      
+
+To determine the demographics of the people that are at risk of these:
+
+
+      SELECT race, COUNT(race) as total FROM risk_data GROUP BY race ORDER BY total DESC limit 10
+
+
+To determine the locations that has been taken down by the dataset:
+
+      SELECT locationdesc, COUNT(locationdesc) as total from risk_data GROUP BY locationdesc 
+ORDER BY total DESC limit 10;
+
+    
