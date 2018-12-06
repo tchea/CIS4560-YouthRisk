@@ -1,3 +1,41 @@
+Step 1: Put Dataset into the Server:
+
+Use assigned IP address: 
+       
+$ ssh (username)@129.150.205.28
+
+Try the following HDFS command to see if the file is in the server:
+       
+ -bash-4.1$ hdfs dfs -ls
+
+Download the csv file onto the server:  
+
+$ wget -O youthrisk https://chronicdata.cdc.gov/views/q6p7-56au/rows.csv?accessType=DOWNLOAD 
+
+Make a directory to put the csv file into:
+
+-bash-4.1$ hdfs dfs -mkdir youthrisk                           
+-bash-4.1$ hdfs dfs -put youthrisk youthriskdata
+
+Remove the file:
+
+-bash-4.1$  rm youthriskdata
+
+
+
+Step 2: Connect to Beeline
+
+beeline> !connect jdbc:hive2://cis4560-bdcsce-4.compute-608214094.oraclecloud.internal:2181,cis4560-bdcsce-2.compute-608214094.oraclecloud.internal:2181,cis4560-bdcsce-3.compute-608214094.oraclecloud.internal:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2?tez.queue.name=interactive bdcsce_admin
+
+
+Use your own database:
+
+Use pnguye47; 
+
+
+
+
+
 CREATING TABLE IN BEELINE
 
 
